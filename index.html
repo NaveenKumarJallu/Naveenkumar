@@ -1,54 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naveen Kumar Jallu | Python Full Stack Developer</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Naveen Kumar Jallu - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --bg-color: #f0f0f0;
+            --text-color: #222;
+            --primary-color: #4b6584;
+            --box-bg: #ffffff;
+            --box-shadow: rgba(0, 0, 0, 0.2);
+            --gradient-light: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad0c4);
+            --gradient-dark: linear-gradient(90deg, #2c3e50, #4ca1af, #0f2027);
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --primary-color: #34495e;
+            --box-bg: #1e1e1e;
+            --box-shadow: rgba(255, 255, 255, 0.2);
+            --gradient-light: linear-gradient(90deg, #ffdde1, #ee9ca7, #ffdde1);
+            --gradient-dark: linear-gradient(90deg, #232526, #414345, #1a1a1a);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease-in-out;
+        }
+
+        header {
+            background: var(--gradient-dark);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px var(--box-shadow);
+        }
+
+        .toggle-btn {
+            background: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background: #ddd;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: var(--gradient-dark);
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .box {
+            background: var(--box-bg);
+            color: var(--text-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px var(--box-shadow);
+            width: 320px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px var(--box-shadow);
+        }
+
+        footer {
+            background: var(--gradient-dark);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: #f39c12;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+    </style>
+
 </head>
+
 <body>
-    <!-- Header Section -->
     <header>
         <h1>Naveen Kumar Jallu</h1>
-        <p>Python Full Stack Developer | RPA Specialist | Machine Learning Enthusiast</p>
+        <p>Python Full Stack Developer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Toggle Mode</button>
     </header>
 
-    <!-- About Me -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate Python Full Stack Developer with expertise in Django, Flask, and MongoDB. I specialize in building scalable web applications and automating workflows using Robotic Process Automation (RPA).</p>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="container">
+            <div class="box">
+                <h3>Full Stack Python Developer</h3>
+                <p><strong>Varchai Private Limited (Onclik) | Feb 2023 - Present</strong></p>
+                <p>Designed and developed full-stack web applications using Django and Flask. Automated manual tasks
+                    using RPA and AI-based solutions for data extraction and processing. Worked on optimizing database
+                    queries for better performance. Managed and executed scheduled trigger bots to automate workflow
+                    processes and enhance business operations.</p>
+            </div>
+            <div class="box">
+                <h3>Python Full Stack Developer Trainee</h3>
+                <p><strong>Palle Technologies | Aug 2022 - Feb 2023</strong></p>
+                <p>Gained hands-on experience in developing web applications using Django and MySQL. Built RESTful APIs
+                    and worked on front-end technologies like HTML, CSS, and JavaScript.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Inventory Management System</h3>
-            <p>Built with Python, Flask, and MongoDB. Streamlined inventory operations, reducing manual errors by 80%.</p>
-        </div>
-        <div class="project">
-            <h3>Onclik - Robotic Process Automation</h3>
-            <p>Developed with Python and REST APIs. Reduced manual task time by 90%.</p>
-        </div>
-    </section>
-
-    <!-- Skills -->
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>Python, Django, Flask</li>
-            <li>MySQL, MongoDB, PostgreSQL</li>
-            <li>HTML/CSS/JavaScript</li>
-            <li>Machine Learning</li>
-        </ul>
+        <div class="container">
+            <div class="box">
+                <h3>Python</h3>
+                <p>Backend development, scripting, and automation. Flask, Django.</p>
+            </div>
+            <div class="box">
+                <h3>MongoDB</h3>
+                <p>Experienced in implementing MongoDB for data storage, optimizing queries, and integrating it with web
+                    applications. NoSQL database operations and optimizations.</p>
+            </div>
+            <div class="box">
+                <h3>MySQL</h3>
+                <p>It is widely used for web applications, ensuring efficient data management and retrieval. Experienced
+                    in database design, writing queries, and optimizing performance.</p>
+            </div>
+            <div class="box">
+                <h3>PostgreSQL</h3>
+                <p>SQL and supports advanced features like JSON, indexing, and scalability. Experienced in database
+                    design, writing queries, and optimizing performance.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="container">
+            <div class="box">
+                <h3>Onclik - Robotic Process Automation</h3>
+                <p>Developed an AI-driven robotic process automation system that streamlines repetitive tasks like data
+                    entry, document processing, and report generation and dyanamic dashboatrds. Improved operational efficiency and reduced
+                    manual workload by 80%.</p>
+            </div>
+            <div class="box">
+                <h3>Hospital Management System</h3>
+                <p>Designed and implemented a Django-based system to manage patient records, doctor appointments,
+                    billing, and staff scheduling. Integrated secure authentication and role-based access control.</p>
+            </div>
+            <div class="box">
+                <h3>Student Management System</h3>
+                <p>Developed a web-based student information system using Django and MySQL. Implemented features such as
+                    student registration, attendance tracking, grade management, and automated reporting.</p>
+            </div>
+            <div class="box">
+                <h3>Inventory Management</h3>
+                <p>Created a real-time inventory tracking application that monitors stock levels, supplier details, and customer details,
+                    generates automated reports. Integrated notifications for low stock alerts. and dyanamic dashboards.</p>
+            </div>
+            <div class="box">
+                <h3>Chatbot Application</h3>
+                <p>Developed a chatbot for data and file exchange using Python. Implemented secure communication
+                    protocols, allowing seamless interaction between users and automation systems.</p>
+            </div>
+            <div class="box">
+                <h3>Data Visualization Dashboard</h3>
+                <p>Built an interactive data visualization dashboard using Python, Flask, and React.js. Designed to analyze
+                    real-time data trends with dynamic graphs, charts,Live Chart data, and user-friendly controls.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="container">
+            <div class="box">
+                <h3>Python Full Stack Developer</h3>
+                <p>Palle Technologies, Bengaluru | Aug 2022 – Feb 2023</p>
+            </div>
+            <div class="box">
+                <h3>Python Full Stack Developer</h3>
+                <p>Besant Technologies, Bengaluru | July 2022 – Sep 2022</p>
+            </div>
+            <div class="box">
+                <h3>Java and SQL Training</h3>
+                <p>Besant Technologies, Bengaluru | June 2022 – Sep 2022</p>
+            </div>
+            <div class="box">
+                <h3>Basic Python Developer</h3>
+                <p>Infosys, Bengaluru | June 2022 – Sep 2022</p>
+            </div>
+            <div class="box">
+                <h3>Python Fundamentals</h3>
+                <p>Great Learning Academy | July 2022 – Sep 2022</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="languages">
+        <h2>Languages</h2>
+        <div class="container">
+            <div class="box">
+                <h3>English</h3>
+                <p>Fluent</p>
+            </div>
+            <div class="box">
+                <h3>Hindi</h3>
+                <p>Fluent</p>
+            </div>
+            <div class="box">
+                <h3>Telugu</h3>
+                <p>Fluent</p>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <h2>Contact</h2>
-        <p>📧 Email: jallunaveenkumar23@gmail.com</p>
-        <p>💼 LinkedIn: <a href="www.linkedin.com/in/jallunaveenkumar23">www.linkedin.com/in/jallunaveenkumar23</a></p>
-        <p>💻 GitHub: <a href="https://NaveenKumarJallu.github.io/">github.com/your-username</a></p>
+        <p>Email: <a href="mailto:naveenkumarjallu2@gmail.com">naveenkumarjallu2@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/jallu-naveenkumar-371ab3222/" target="_blank">Jallu NaveenKumar</a>
+        </p>
+        <p><strong>Permanent Address:</strong> Andhra Pradesh, Kurnool, 518401</p>
+        <p><strong>Current Address:</strong> Bangalore, Bommanahalli, 560068</p>
     </section>
+
+    <footer>
+        <p>&copy; 2025 Naveen Kumar Jallu. All rights reserved.</p>
+    </footer>
+
+
+
 </body>
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
+
 </html>
