@@ -7,301 +7,487 @@
     <title>NaveenKumar Jallu</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        :root {
-            --bg-color: #f0f0f0;
-            --text-color: #222;
-            --primary-color: #4b6584;
-            --box-bg: #ffffff;
-            --box-shadow: rgba(0, 0, 0, 0.2);
-            --gradient-light: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad0c4);
-            --gradient-dark: linear-gradient(90deg, #2c3e50, #4ca1af, #0f2027);
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    :root {
+        --bg-color: #f0f0f0;
+        --text-color: #222;
+        --primary-color: #4b6584;
+        --box-bg: #ffffff;
+        --box-shadow: rgba(0, 0, 0, 0.2);
+        --gradient-light: linear-gradient(90deg, #fad0c4, #fad0c4, #fad0c4);
+        --gradient-dark: linear-gradient(90deg, #2c3e50, #2c3e00, #0f2027);
+    }
 
-        body.dark-mode {
-            --bg-color: #121212;
-            --text-color: #ffffff;
-            --primary-color: #34495e;
-            --box-bg: #1e1e1e;
-            --box-shadow: rgba(255, 255, 255, 0.2);
-            --gradient-light: linear-gradient(90deg, #ffdde1, #ee9ca7, #ffdde1);
-            --gradient-dark: linear-gradient(90deg, #232526, #414345, #1a1a1a);
-        }
+    body.dark-mode {
+        --bg-color: #121212;
+        --text-color: #ffffff;
+        --primary-color: #34495e;
+        --box-bg: #1e1e1e;
+        --box-shadow: rgba(255, 255, 255, 0.2);
+        --gradient-light: linear-gradient(90deg, #232526, #ee9ca7, #ffdde1);
+        --gradient-dark: linear-gradient(90deg, #232526, #414345, #1a1a1a);
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: var(--bg-color);
-            color: var(--text-color);
-            transition: all 0.3s ease-in-out;
-        }
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: var(--bg-color);
+        color: var(--text-color);
+        transition: all 0.3s ease-in-out;
+    }
+       html {
+    scroll-behavior: smooth; /* Enable smooth scrolling for the entire page */
+    }
 
-        header {
-            background: var(--gradient-dark);
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 10px var(--box-shadow);
-        }
+    /* Adjust the section padding and margin */
+    section {
+        padding-top:0.9rem;
+        padding-bottom:1rem;
+        padding-left:25px;
+        padding-right:20px
+    }
 
-        .toggle-btn {
-            background: white;
-            border: none;
-            padding: 0px 5px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
 
-        .toggle-btn:hover {
-            background: #ddd;
-        }
+    /* Reduce scrollbar size */
+    ::-webkit-scrollbar {
+        width: 1px; /* Reduce width for vertical scrollbar */
+        height: 2px; /* Reduce height for horizontal scrollbar */
+    }
 
-        main {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-        }
 
-        h2 {
-            color: var(--gradient-dark);
-            text-align: center;
-        }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
 
-        .box {
-            background: var(--box-bg);
-            color: var(--text-color);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px var(--box-shadow);
-            width: 320px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
-        }
-
-        .box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px var(--box-shadow);
-        }
-
-        footer {
-            background: var(--gradient-dark);
-            color: white;
-            padding: 10px;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            color: #f39c12;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #f39c12;
-        }
-
-        @media (max-width: 768px) {
-    header {
-        flex-direction: column;
+    h2 {
+        color: var(--gradient-dark);
         text-align: center;
     }
 
+    h1 {
+        color: var(--gradient-dark);
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .box {
+        background: var(--box-bg);
+        color: var(--text-color);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px var(--box-shadow);
+        width: 320px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+    }
+
+    .box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px var(--box-shadow);
+    }
+
+    footer {
+        background: var(--gradient-dark);
+        color: white;
+        padding: 10px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        color: #f39c12;
+    }
+
+    /* Header */
+    header {
+        background: var(--gradient-dark);
+        color: white;
+        padding: 1.5rem; /* Use rem for padding */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed; /* Fix the header at the top */
+        top: 0; /* Stick to the top */
+        left: 0; /* Stick to the left */
+        width: 100%; /* Full width */
+        z-index: 1000; /* Ensure it stays above other content */
+        box-shadow: 0 4px 10px var(--box-shadow);
+    }
+
+    /* Menu Icon */
+    .menu-icon {
+        font-size: 1.5rem; /* Use rem for font size */
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        left: 1.25rem; /* Use rem for positioning */
+    }
+
+    /* Header Content */
+    .header-content {
+        display: flex;
+        flex: 1; /* Take up remaining space */
+        justify-content: center; /* Center the title */
+        align-items: center;
+        margin-left: 4rem; /* Adjust based on menu icon width */
+    }
+
+    /* Title Container */
+    .title-container {
+        text-align: center;
+        position: absolute; /* Position absolutely to center */
+        left: 50%; /* Move to the center */
+        transform: translateX(-50%); /* Adjust for exact centering */
+    }
+
+    .title-container h1 {
+        font-size: 1.6rem; /* Use rem for font size */
+        margin: 0;
+    }
+
+    /* Subtitle Container */
+    .subtitle-container {
+        text-align: right; /* Align subtitle to the right */
+        margin-left: 76%; /* Push subtitle to the right */
+    }
+
+    .subtitle-container p {
+        font-size: 1.25rem; /* Use rem for font size */
+        margin: 0;
+    }
+
+    /* Navigation Menu */
+    nav {
+        display: none;
+        flex-direction: column;
+        background: var(--gradient-dark);
+        position: fixed; /* Fix the menu position */
+        top: 5rem; /* Position below the header */
+        left: 1.25rem; /* Use rem for positioning */
+        padding: 1rem; /* Use rem for padding */
+        border-radius: 5px;
+        box-shadow: 0 4px 10px var(--box-shadow);
+        z-index: 1000; /* Ensure it stays above other content */
+    }
+
     nav ul {
+        list-style: none;
         padding: 0;
-        margin-top: 10px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem; /* Use rem for gap */
     }
 
     nav ul li {
-        display: block;
-        margin: 5px 0;
+        display: inline;
     }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem; /* Use rem for font size */
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #f39c12;
+    }
+
+    /* Toggle Button inside Menu */
+    .toggle-btn {
+        background: var(--box-bg);
+        border: none;
+        padding: 0.5rem 1rem; /* Use rem for padding */
+        font-size: 1rem; /* Use rem for font size */
+        cursor: pointer;
+        border-radius: 5px;
+        color: var(--text-color);
+        transition: 0.3s;
+    }
+
+    .toggle-btn:hover {
+        background: #ddd;
+    }
+
+    /* Show navigation menu when active */
+    nav.active {
+        display: flex;
+    }
+
+    /* Disable text selection and pointer events on header and titles */
+header, .title-container, .subtitle-container, h1, h2 {
+    user-select: none ;
 }
-    </style>
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        html {
+            font-size: 14px; /* Reduce base font size for smaller screens */
+        }
+
+        header {
+            padding: 1rem; /* Reduce padding for smaller screens */
+        }
+
+        .menu-icon {
+            font-size: 1.25rem; /* Adjust icon size for smaller screens */
+            left: 1rem; /* Adjust positioning for smaller screens */
+        }
+
+        .header-content {
+            flex-direction: column; /* Stack title and subtitle vertically */
+            align-items: center; /* Center items */
+            margin-left: 3rem; /* Adjust for smaller screens */
+            user-select:none;
+        }
+
+        .title-container {
+            position: static; /* Reset absolute positioning */
+            left: auto;
+            transform: none;
+            text-align: center; /* Center title */
+        }
+
+
+
+        .subtitle-container {
+            text-align: center; /* Center subtitle */
+            margin-left: 0; /* Reset margin */
+            margin-top: 0.5rem; /* Add space between title and subtitle */
+        }
+
+        nav {
+            top: 4rem; /* Adjust menu position for smaller screens */
+            left: 1rem; /* Adjust menu position for smaller screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        html {
+            font-size: 12px; /* Further reduce base font size for very small screens */
+        }
+
+        header {
+            padding: 0.75rem; /* Further reduce padding for very small screens */
+        }
+
+        .menu-icon {
+            font-size: 1rem; /* Further adjust icon size for very small screens */
+            left: 0.75rem; /* Further adjust positioning for very small screens */
+        }
+
+        .header-content {
+            margin-left: 2.5rem; /* Further adjust for very small screens */
+        }
+
+        .title-container h1 {
+            font-size: 1.5rem; /* Further adjust title size for very small screens */
+        }
+
+        .subtitle-container p {
+            font-size: 0.875rem; /* Further adjust subtitle size for very small screens */
+        }
+
+        nav {
+            top: 3.5rem; /* Further adjust menu position for very small screens */
+            left: 0.75rem; /* Further adjust menu position for very small screens */
+        }
+    }
+
+
+
+
+</style>
 
 </head>
 
 <body>
-    <header>
-        <h1>NaveenKumar Jallu</h1>
-        <p>Python Full Stack Developer</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#languages">Languages</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <button class="toggle-btn" onclick="toggleDarkMode()">🌙</button>
-    </header>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="container">
-            <div class="box">
-                <h3>Full Stack Python Developer</h3>
-                <p><strong>Varchai Private Limited (Onclik)</strong></p>
-                <pre>Feb 2023 - Present</pre>
-                <p>Designed and developed full-stack web applications using Django and Flask. Automated manual tasks
-                    using RPA and AI-based solutions for data extraction and processing. Worked on optimizing database
-                    queries for better performance. Managed and executed scheduled trigger bots to automate workflow
-                    processes and enhance business operations.</p>
-            </div>
-            <div class="box">
-                <h3>Python Full Stack Developer Trainee</h3>
-                <p><strong>Palle Technologies</strong></p>
-                <pre>Aug 2022 - Feb 2023</pre>
-                <p>Developed web applications using Django, MySQL, Python, HTML, CSS, and JavaScript. Built RESTful APIs, implemented authentication, optimized database queries, and designed responsive UIs. Completed multiple projects, gaining hands-on experience in full-stack development.</p>
-            </div>
+<header>
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i> <!-- Font Awesome hamburger icon -->
+    </div>
+    <!-- Title and Subtitle -->
+    <div class="header-content">
+        <div class="title-container">
+            <h1>Naveen Kumar Jallu</h1>
         </div>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="container">
-            <div class="box">
-                <h3>Python</h3>
-                <p>Backend development, scripting, and automation with Flask and Django. Machine learning and data visualization.</p>
-            </div>
-            <div class="box">
-                <h3>MongoDB</h3>
-                <p>Experienced in implementing MongoDB for data storage, optimizing queries, and integrating it with web
-                    applications. NoSQL database operations and optimizations.</p>
-            </div>
-            <div class="box">
-                <h3>MySQL</h3>
-                <p>It is widely used for web applications, ensuring efficient data management and retrieval. Experienced
-                    in database design, writing queries, and optimizing performance.</p>
-            </div>
-            <div class="box">
-                <h3>PostgreSQL</h3>
-                <p>SQL and supports advanced features like JSON, indexing, and scalability. Experienced in database
-                    design, writing queries, and optimizing performance.</p>
-            </div>
+        <div class="subtitle-container">
+            <p>Python Full Stack Developer</p>
         </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="container">
-            <div class="box">
-                <h3>Onclik - Robotic Process Automation</h3>
-                <p>Developed an AI-driven robotic process automation system that streamlines repetitive tasks like data
-                    entry, document processing, and report generation and dyanamic dashboatrds. Improved operational efficiency and reduced
-                    manual workload </p>
-            </div>
-            <div class="box">
-                <h3>HRMS(Human Resource Management System)</h3>
-                <p>Developed an HRMS application to automate payroll, leave management, travel approvals, appraisals, and disciplinary cases, featuring dynamic role-based dashboards for real-time insights. Automated payslip generation and leave tracking, significantly improving accuracy and efficiency.</p>
-            </div>
-            <div class="box">
-                <h3>Hospital Management System</h3>
-                <p>Designed and implemented a Django-based system to manage patient records, doctor appointments,
-                    billing, and staff scheduling. Integrated secure authentication and role-based access control.</p>
-            </div>
-            <div class="box">
-                <h3>Student Management System</h3>
-                <p>Developed a web-based student information system using Django and MySQL. Implemented features such as
-                    student registration, attendance tracking, grade management, and automated reporting.</p>
-            </div>
-            <div class="box">
-                <h3>Inventory Management</h3>
-                <p>Created a real-time inventory tracking application that monitors stock levels, supplier details, and customer details,
-                    generates automated reports. Integrated notifications for low stock alerts. and dyanamic dashboards.</p>
-            </div>
-            <div class="box">
-                <h3>Chatbot Application</h3>
-                <p>Developed a chatbot for data and file exchange using Python. Implemented secure communication
-                    protocols, allowing seamless interaction between users and automation systems.</p>
-            </div>
-            <div class="box">
-                <h3>Data Visualization Dashboard</h3>
-                <p>Developed an interactive data visualization dashboard with Python, Flask, and React.js. Includes real-time data trends, dynamic charts, live updates, and user-friendly controls with data creation, updating, and deletion features.</p>
-            </div>
+    </div>
+    <!-- Navigation Menu -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- Dark Mode Toggle Button -->
+            <li>
+                <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div style=" margin-top:5rem;">
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="container">
+        <div class="box">
+            <h3>Full Stack Python Developer</h3>
+            <p><strong>Varchai Private Limited (Onclik)</strong></p>
+            <pre>Feb 2023 - Present</pre>
+            <p>Designed and developed full-stack web applications using Django and Flask. Automated manual tasks
+                using RPA and AI-based solutions for data extraction and processing. Worked on optimizing database
+                queries for better performance. Managed and executed scheduled trigger bots to automate workflow
+                processes and enhance business operations.</p>
         </div>
-    </section>
-
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="container">
-            <div class="box">
-                <h3>Python Full Stack Developer</h3>
-                <p>Palle Technologies, Bengaluru | Aug 2022 – Feb 2023</p>
-            </div>
-            <div class="box">
-                <h3>Python Full Stack Developer</h3>
-                <p>Besant Technologies, Bengaluru | July 2022 – Sep 2022</p>
-            </div>
-            <div class="box">
-                <h3>Java and MYSQL Training</h3>
-                <p>Besant Technologies, Bengaluru | June 2022 – Sep 2022</p>
-            </div>
-            <div class="box">
-                <h3>Basic Python Developer</h3>
-                <p>Infosys, Bengaluru | June 2022 – Sep 2022</p>
-            </div>
-            <div class="box">
-                <h3>Python Fundamentals</h3>
-                <p>Great Learning Academy | July 2022 – Sep 2022</p>
-            </div>
+        <div class="box">
+            <h3>Python Full Stack Developer Trainee</h3>
+            <p><strong>Palle Technologies</strong></p>
+            <pre>Aug 2022 - Feb 2023</pre>
+            <p>Developed web applications using Django, MySQL, Python, HTML, CSS, and JavaScript. Built RESTful APIs,
+                implemented authentication, optimized database queries, and designed responsive UIs. Completed multiple
+                projects, gaining hands-on experience in full-stack development.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="languages">
-        <h2>Languages</h2>
-        <div class="container">
-            <div class="box">
-                <h3>English</h3>
-                <p>Fluent</p>
-            </div>
-            <div class="box">
-                <h3>Hindi</h3>
-                <p>Fluent</p>
-            </div>
-            <div class="box">
-                <h3>Telugu</h3>
-                <p>Fluent</p>
-            </div>
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="container">
+        <div class="box">
+            <h3>Python</h3>
+            <p>Backend development, scripting, and automation with Flask and Django. Machine learning and data
+                visualization.</p>
         </div>
-    </section>
+        <div class="box">
+            <h3>MongoDB</h3>
+            <p>Experienced in implementing MongoDB for data storage, optimizing queries, and integrating it with web
+                applications. NoSQL database operations and optimizations.</p>
+        </div>
+        <div class="box">
+            <h3>MySQL</h3>
+            <p>It is widely used for web applications, ensuring efficient data management and retrieval. Experienced
+                in database design, writing queries, and optimizing performance.</p>
+        </div>
+        <div class="box">
+            <h3>PostgreSQL</h3>
+            <p>SQL and supports advanced features like JSON, indexing, and scalability. Experienced in database
+                design, writing queries, and optimizing performance.</p>
+        </div>
+    </div>
+</section>
 
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="container">
+        <div class="box">
+            <h3>Onclik - Robotic Process Automation</h3>
+            <p>Developed an AI-driven robotic process automation system that streamlines repetitive tasks like data
+                entry, document processing, and report generation and dyanamic dashboatrds. Improved operational
+                efficiency and reduced
+                manual workload </p>
+        </div>
+        <div class="box">
+            <h3>HRMS(Human Resource Management System)</h3>
+            <p>Developed an HRMS application to automate payroll, leave management, travel approvals, appraisals, and
+                disciplinary cases, featuring dynamic role-based dashboards for real-time insights. Automated payslip
+                generation and leave tracking, significantly improving accuracy and efficiency.</p>
+        </div>
+        <div class="box">
+            <h3>Hospital Management System</h3>
+            <p>Designed and implemented a Django-based system to manage patient records, doctor appointments,
+                billing, and staff scheduling. Integrated secure authentication and role-based access control.</p>
+        </div>
+        <div class="box">
+            <h3>Student Management System</h3>
+            <p>Developed a web-based student information system using Django and MySQL. Implemented features such as
+                student registration, attendance tracking, grade management, and automated reporting.</p>
+        </div>
+        <div class="box">
+            <h3>Inventory Management</h3>
+            <p>Created a real-time inventory tracking application that monitors stock levels, supplier details, and
+                customer details,
+                generates automated reports. Integrated notifications for low stock alerts. and dyanamic dashboards.</p>
+        </div>
+        <div class="box">
+            <h3>Chatbot Application</h3>
+            <p>Developed a chatbot for data and file exchange using Python. Implemented secure communication
+                protocols, allowing seamless interaction between users and automation systems.</p>
+        </div>
+        <div class="box">
+            <h3>Data Visualization Dashboard</h3>
+            <p>Developed an interactive data visualization dashboard with Python, Flask, and React.js. Includes
+                real-time data trends, dynamic charts, live updates, and user-friendly controls with data creation,
+                updating, and deletion features.</p>
+        </div>
+    </div>
+</section>
+
+<section id="certifications">
+    <h2>Certifications</h2>
+    <div class="container">
+        <div class="box">
+            <h3>Python Full Stack Developer</h3>
+            <p>Palle Technologies, Bengaluru | Aug 2022 – Feb 2023</p>
+        </div>
+        <div class="box">
+            <h3>Python Full Stack Developer</h3>
+            <p>Besant Technologies, Bengaluru | July 2022 – Sep 2022</p>
+        </div>
+        <div class="box">
+            <h3>Java and MYSQL Training</h3>
+            <p>Besant Technologies, Bengaluru | June 2022 – Sep 2022</p>
+        </div>
+        <div class="box">
+            <h3>Basic Python Developer</h3>
+            <p>Infosys, Bengaluru | June 2022 – Sep 2022</p>
+        </div>
+        <div class="box">
+            <h3>Python Fundamentals</h3>
+            <p>Great Learning Academy | July 2022 – Sep 2022</p>
+        </div>
+    </div>
+</section>
+
+<section id="languages">
+    <h2>Languages</h2>
+    <div class="container">
+        <div class="box">
+            <h3>English</h3>
+            <p>Fluent</p>
+        </div>
+        <div class="box">
+            <h3>Hindi</h3>
+            <p>Fluent</p>
+        </div>
+        <div class="box">
+            <h3>Telugu</h3>
+            <p>Fluent</p>
+        </div>
+    </div>
+</section>
+</div>
 <!--     <section id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:naveenkumarjallu2@gmail.com">naveenkumarjallu2@gmail.com</a></p>
@@ -311,28 +497,70 @@
         <p><strong>Current Address:</strong> Bangalore, Bommanahalli, 560068</p>
     </section> -->
 
+<footer>
     <footer>
-        <footer>
         <section id="contact" style="color:black">
             <h2>Contact</h2>
-            <p style="color:black"><strong style="color:black">Email: </strong> <a href="mailto:naveenkumarjallu2@gmail.com" style="color:blanchedalmond;">naveenkumarjallu2@gmail.com</a></p>
-            <p style="color:black"><strong style="color:black">LinkedIn: </strong><a href="https://www.linkedin.com/in/jallu-naveenkumar-371ab3222/" target="_blank" style="color:blanchedalmond;">Jallu
-                    NaveenKumar</a>
+            <p style="color:black"><strong style="color:black">Email: </strong> <a
+                    href="mailto:naveenkumarjallu2@gmail.com"
+                    style="color:blanchedalmond;">naveenkumarjallu2@gmail.com</a></p>
+            <p style="color:black"><strong style="color:black">LinkedIn: </strong><a
+                    href="https://www.linkedin.com/in/jallu-naveenkumar-371ab3222/" target="_blank"
+                    style="color:blanchedalmond;">Jallu
+                NaveenKumar</a>
             </p>
-            <p style="color:blanchedalmond;"><strong style="color:black">Permanent Address:</strong> Andhra Pradesh, Kurnool, 518401</p>
-            <p style="color:blanchedalmond;"><strong style="color:black">Current Address:</strong> Bangalore, Bommanahalli, 560068</p>
+            <p style="color:blanchedalmond;"><strong style="color:black">Permanent Address:</strong> Andhra Pradesh,
+                Kurnool, 518401</p>
+            <p style="color:blanchedalmond;"><strong style="color:black">Current Address:</strong> Bangalore,
+                Bommanahalli, 560068</p>
         </section>
-        <p ><strong style="color:black">&copy; 2025 Naveen Kumar Jallu. All rights reserved.</strong></p>
+        <p><strong style="color:black">&copy; 2025 Naveen Kumar Jallu. All rights reserved.</strong></p>
     </footer>
-    </footer>
-
+</footer>
 
 
 </body>
 <script>
-    function toggleDarkMode() {
-        document.body.classList.toggle('dark-mode');
+function toggleMenu() {
+    const navMenu = document.getElementById("nav-menu");
+    navMenu.classList.toggle("active");
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        // Close the menu
+        const navMenu = document.getElementById("nav-menu");
+        navMenu.classList.remove("active");
+
+        // Smooth scroll to the target section
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+            e.preventDefault();
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start' // Align to the top of the section
+            });
+        }
+    });
+});
+// Add event listener to detect scroll
+window.addEventListener('scroll', function() {
+    const body = document.body;
+
+    // Check if page is scrolled and content overflows
+    if (document.documentElement.scrollTop > 0 || body.scrollHeight > window.innerHeight) {
+        body.classList.add('scrollable');  // Show scrollbar when scrolled or content overflows
+    } else {
+        body.classList.remove('scrollable');  // Hide scrollbar when not needed
     }
+});
+
+
 </script>
 
 </html>
