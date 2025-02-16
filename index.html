@@ -535,10 +535,17 @@ function toggleMenu() {
     navMenu.classList.toggle("active");
 }
 
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
+// Close the menu when clicking anywhere outside of the menu
+document.addEventListener('click', function (e) {
+    const navMenu = document.getElementById("nav-menu");
+    const menuIcon = document.querySelector('.menu-icon');
+    
+    if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
+        navMenu.classList.remove("active");
+    }
+});
 
+// Close the menu and scroll smoothly when a link is clicked
 document.querySelectorAll('nav ul li a').forEach(link => {
     link.addEventListener('click', function (e) {
         // Close the menu
@@ -557,6 +564,12 @@ document.querySelectorAll('nav ul li a').forEach(link => {
         }
     });
 });
+
+// Dark Mode toggle
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+
 // Add event listener to detect scroll
 window.addEventListener('scroll', function() {
     const body = document.body;
